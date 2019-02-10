@@ -1,0 +1,313 @@
+.lawyerhead{
+    display: block;
+	padding: 0.5rem;
+	font-size: 0rem;
+	background: white;
+}
+
+.lawyerhead .msg{
+width: 100%;
+	display: inline-block;
+	font-size: 0.7rem;
+	
+}
+
+
+.lawyerhead .msg_img{
+	float: left;
+	height: 3rem;
+	width: 3rem;
+	border-radius: 50%;
+	overflow: hidden;
+   background-position: 50% 50%;
+	background-size: cover;
+	margin-right: 0.5rem;
+}
+
+.lawyerhead .msg_center{
+	float: left;
+	padding: 0.5rem 0rem;
+}
+
+
+.lawyerhead .msg_center p{
+	font-size: 0.8rem;
+}
+
+.lawyerhead .msg_center p small{
+	color: #808080;
+	margin-left: 0.5rem;
+	font-size: 0.6rem;
+}
+
+
+
+.lawyerhead .msg_center h3{
+	margin-top: 0.2rem;
+	font-size: 0px;
+}
+.lawyerhead .msg_center h3 span{
+	display: inline-block;
+	height: 0.8rem;
+	float: left;
+	color: #10CBB8;
+	border:solid 1px #10CBB8;
+	font-size: 0.5rem;
+	margin-right: 0.5rem;
+	padding: 0rem 0.2rem;
+	line-height: 0.8rem;
+	border-radius: 0.8rem;
+}
+
+
+.lawyer_type ul{
+	padding: 0.5rem 0rem;
+	display: inline-block;
+	width: 100%;
+	clear: both;
+	background: white;
+}
+
+.lawyer_type  ul li{
+	float: left;
+	width: 33.33%;
+	text-align: center;
+	
+}
+
+.lawyer_type  ul li p{
+display: block;
+width: 100%;
+font-size: 0.8rem;
+}
+
+
+.lawyer_type  ul li span{
+	color: #999;
+	padding-top: 0.5rem;
+display: block;
+width: 100%;
+font-size: 0.6rem;
+}
+
+
+.lawyer_type  ul li.gift{
+	color: orangered;
+}
+
+
+.lawyer_type  ul li.gift span{
+	color: orangered;
+}
+
+
+.lawyer_help{
+	width: 100%;
+	padding: 0.5rem 0rem;
+	background: white;
+	margin: 0.5rem 0rem;
+}
+
+
+.head_title{
+	padding:0rem 0.5rem;
+	line-height: 1rem;
+	font-size: 0.7rem;
+}
+
+.head_title p{
+	border-left:solid 0.2rem #10CBB8;
+	padding-left: 0.5rem;
+}
+
+.head_title p a{
+	float: right;
+	
+}
+
+.head_title p a img{
+	float: right;
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	margin-left: 0.3rem;
+}
+
+.lawyer_help .ul_nav{
+	height: 6rem;
+	width: 100%;
+	overflow: hidden;
+}
+
+.lawyer_help ul{
+	width: 100%;
+	font-size: 0px;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+
+.lawyer_help ul li{
+	width: 5rem;
+	display: inline-block;
+	text-align: center;
+	font-size: 0.6rem;
+	padding: 1rem 0rem;
+}
+
+
+.lawyer_help ul li i{
+	display: block;
+	width: 3rem;
+	margin: 0px auto;
+}
+
+.lawyer_help ul li i img{
+	display: block;
+	width: 3rem;
+	height: 3rem;
+}
+
+.lawyer_help ul li  p{
+	color:#AAAAAA;
+	height: 1rem;
+	line-height: 1rem;
+	margin-top: 0.2rem;
+}
+
+.lawyer_help ul li  span{
+		color:orange
+}
+
+.lawyer_msg{
+	width: 100%;
+	padding: 0.5rem 0rem;
+	background: white;
+	font-size: 0px;
+}
+
+.lawyer_msg ul{
+	width: 100%;
+	display: inline-block;
+}
+
+
+.lawyer_msg ul li{
+	width: 50%;
+	float: left;
+	text-align: center;
+	padding: 1rem 0rem;
+}
+
+
+.lawyer_msg ul li p{
+	color: #333333;
+	font-size: 0.7rem;
+	padding-bottom: 0.3rem;
+}
+
+
+.lawyer_msg ul li span{
+	color: #AAAAAA;
+	font-size: 0.6rem;
+}
+
+
+.lawyer_msg ul li.border{
+	box-sizing: border-box;
+	border-right: solid 1px #EEEEEE;
+}
+
+
+.lawyer_evaluation{
+	margin-top: 0.5rem;
+	padding: 0.5rem 0rem;
+	background: white;
+}
+
+
+.lawyer_evaluation ul{
+	display: block;
+	
+	padding:0rem 0.5rem;
+}
+
+.lawyer_evaluation ul li{
+	display: block;
+	width: 100%;
+	padding: 0.5rem 0rem;
+	border-bottom: solid 1px #EEEEEE;
+}
+
+.lawyer_evaluation ul li h6{
+	color: #AAAAAA;
+	font-size: 0.6rem;
+	line-height: 1rem;
+	font-weight: 100;
+}
+
+.lawyer_evaluation ul li h6 span{
+	margin-left: 0.5rem;
+	color: #10CBB8;
+	font-weight: bold;
+}
+
+.lawyer_evaluation ul li h6 small{
+	float: right;
+	font-size: 0.5rem;
+}
+
+
+.lawyer_evaluation ul li p{
+	font-size: 0.7rem;
+	padding: 0.5rem 0rem;
+}
+
+
+.lawyer_evaluation ul li h5{
+	color: #AAAAAA;
+	font-size: 0.6rem;
+	font-weight: 100;
+}
+
+.lawyer .lawyer_bottom{
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	z-index: 9;
+	width: 100%;
+	height: 50px;
+
+	font-size: 0.7rem;
+}
+
+.lawyer .lawyer_bottom ul{
+		display: none;
+}
+
+.lawyer .lawyer_bottom ul li{
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: white;
+}
+
+
+.lawyer .lawyer_bottom ul li.bl{
+	width: 60%;
+	color: orange;
+}
+
+.lawyer .lawyer_bottom ul li.br{
+	width: 40%;
+	color: white;
+	background: #10CBB8;
+}
+
+
+.lawyer .lawyer_bottom ul li.br a{
+	
+	color: white;
+	
+}

@@ -1,0 +1,160 @@
+.login_logo{
+	display: block;
+	width: 100%;
+	margin: 2rem 0px;
+}
+
+.login_logo img{
+	display: block;
+	width: 50%;
+	margin: 0px auto;
+}
+
+
+.login_centrt {
+
+padding: 0rem 3rem;
+}
+
+.login_centrt ul{
+	display: block;
+	width: 100%;
+}
+
+.login_centrt ul li{
+	display: block;
+	
+	border-bottom: solid 1px #EEEEEE;
+	padding: 0.5rem 0rem;
+	
+}
+
+.login_centrt ul li input{
+	width: 100%;
+	display: block;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.6rem;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+
+.login_centrt ul li.password{
+	position: relative;
+	padding-right: 4rem;
+}
+
+
+.login_centrt ul li button{
+	position: absolute;
+	top: 0.2rem;
+	right: 0px;
+	width: 4rem;
+	height: 1.6rem;
+	background: gray;
+	border: none;
+	border-radius: 0.2rem;
+	outline: none;
+	color: white;
+	font-size: 0.6rem;
+
+}
+
+
+
+.login_centrt .logon_but{
+	display: block;
+	width: 100%;
+	border: none;
+	border-radius: 0.2rem;
+	background: #10CBB8;
+	color: white;
+	outline: none;
+	font-size: 0.7rem;
+	padding: 0.5rem 0rem;
+	margin-top: 0.5rem;
+}
+
+
+
+.login .login_tip{
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 0.5rem;
+	color: #333333;
+	padding: 0.2rem 0rem;
+}
+
+.login .login_more{
+	display: block;
+	
+   
+    padding: 2rem 3rem;
+}
+
+
+.login .login_more .title{
+	border-bottom: solid 1px #EEEEEE;
+	position: relative;
+
+}
+
+
+.login .login_more .title span{
+	position: absolute;
+	width: 4rem;
+	height: 1rem;
+	text-align: center;
+	line-height: 1rem;
+	background: white;
+	font-size: 0.6rem;
+	top: -0.5rem;
+	left: 50%;
+	margin-left: -2rem;
+}
+
+
+.login .login_more ul{
+	display: inline-block;
+	padding-top: 2rem;
+	width: 100%;
+}
+.login .login_more ul li{
+	float: left;
+	width: 50%;
+}
+
+.login .login_more ul li img{
+	display: block;
+	width: 2rem;
+	height:2rem ;
+	margin: 0px auto;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+
+.login .login_wt{
+	position: fixed;
+	width: 100%;
+	bottom: 2rem;
+	left: 0px;
+	
+}
+
+
+.login .login_wt p{
+	font-size: 0.5rem;
+	color: #AAAAAA;
+	text-align: center;
+	height: 1rem;
+	line-height: 1rem;
+}
+
+
+.login .login_wt p a{
+	color: #AAAAAA;
+}

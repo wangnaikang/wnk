@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/forum.css" />
+	</head>
+
+	<body>
+
+		<div id="project_center" style="background: white; padding-bottom: 0px;">
+
+			<div class="forum">
+				<div class="top_template fixed">
+					<span class="top_Tleft"><a href="javascript:history.back(-1)">返回</a></span>
+					<p class="top_Tcenter">论坛详情</p>
+					<span class="top_Trightt"></span>
+				</div>
+
+				<div class="forum_title">
+					<div class="nav">
+						<div class="userImg" style="background: url(../img/class/classbannerimgone.jpg) no-repeat center; "></div>
+						<p>那一片雪</p>
+						<span>律师</span>
+						<small  onclick="drawer(0)">添加回答</small>
+					</div>
+
+				</div>
+
+				<div class="forumsdetails">
+
+					<div class="ht_type">
+						<ul>
+							<li>劳动</li>
+						</ul>
+
+						<p class="wt_title">公司节假日放假加班应该几倍工资</p>
+						<span class="wt_ms">公司节假日放假加班应该几倍工资</span>
+
+						<div class="wt_share">
+							<p>热度：660</p>
+							<span>编辑于2018-12-31</span>
+							<div class="share">
+								<a>分享</a>
+								<a>关注</a>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="wt_banner">
+						<img src="../img/class/classbannerimgone.jpg" />
+					</div>
+
+					<div class="wt_hf">
+						<ul>
+							<li>
+								<div class="usermsg">
+									<div class="userImg" style="background: url(../img/class/classbannerimgone.jpg) no-repeat center; "></div>
+									<p>那一片雪</p>
+									<span>律师</span>
+									<small>2015-12-31 8:00</small>
+								</div>
+
+								<div class="usertake">
+									<p>首先可以确认的是法定节假日加班是需要支付额外工资的</p>
+								</div>
+								
+								<div class="user_op">
+									<span onclick="showmore(this)"><img src="../img/forum/good.png"/>2</span>
+									<span><img src="../img/forum/good.png"/>5</span>
+									<span><img src="../img/forum/good.png"/>6</span>
+								</div>
+								
+								<div class="more">
+									
+									<div class="more_input">
+										<input type="text" name="" id="" value="" />
+										<button>发表</button>
+									</div>
+									
+									
+									<div class="item">
+										<div class="moremsg">
+									<div class="userImg" style="background: url(../img/class/classbannerimgone.jpg) no-repeat center; "></div>
+									<p>那一片雪</p>
+									<span>律师</span>
+									<small>2015-12-31 8:00</small>
+									
+									<div class="take">
+										<p>首先可以确认的是法定节假日加班是需要支付额外工资的</p>
+									</div>
+									
+									<div class="more_take">
+										<span>回复</span>
+									</div>
+									
+								</div>
+									</div>
+								</div>
+								
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				
+				
+				<!--我的回答-->
+				
+				
+				<!--我的回答-end-->
+				
+
+			</div>
+
+		</div>
+
+		<!--提升形象载体-->
+		<div id="tip"></div>
+
+	</body>
+	<script src="../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Iswidth()
+
+		function Iswidth() {
+			var size = (document.documentElement.clientWidth / 360) * 20;
+
+			if(size > 40) {
+				size = 40
+			}
+
+			document.documentElement.style.fontSize = size + 'px'
+		}
+		
+		
+		function  showmore (obj) {
+			
+			if ($(obj).parents('li').find('.more').is('.ac')) {
+				$(obj).parents('li').find('.more').removeClass('ac')
+				$(obj).parents('li').find('.more').hide()
+			}else{
+				
+						$(obj).parents('li').find('.more').addClass('ac')
+					$(obj).parents('li').find('.more').show()
+			}
+			
+		
+		}
+		
+	</script>
+
+</html>

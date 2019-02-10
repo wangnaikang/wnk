@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style type="text/css">
+			.pay .pay_bottom {
+				position: fixed;
+				left: 0px;
+				bottom: 0px;
+				z-index: 9;
+				width: 100%;
+				height: 50px;
+				font-size: 0.7rem;
+			}
+			
+			.pay .pay_bottom ul {
+				display: none;
+			}
+			
+			.pay .pay_bottom ul li {
+				float: left;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background: white;
+			}
+			
+			.pay .pay_bottom ul li.bl {
+				width: 60%;
+				color: orange;
+			}
+			
+			.pay .pay_bottom ul li.br {
+				width: 40%;
+				color: white;
+				background: #10CBB8;
+			}
+			
+			.pay .pay_bottom ul li.br a {
+				color: white;
+			}
+			
+			.pay_warp {
+				padding: 0.5rem;
+				display: block;
+			}
+			
+			.pay_warp .warp {
+				display: block;
+				padding: 0.5rem;
+				background: white;
+				border-radius: 0.2rem;
+				margin-bottom: 0.5rem;
+				line-height: 1rem;
+				font-size: 0.8rem
+			}
+			
+			.pay_warp .warp.good {
+				background: #10CBB8;
+				line-height: 2rem;
+				color: white;
+				font-size: 0.9rem;
+			}
+			
+			.pay_warp .warp.good span {
+				float: right;
+				color: white;
+			}
+			
+			.pay_warp .warp.lawyer span {
+				float: right;
+				font-size: 0.7rem;
+				display: block;
+				color: #AAAAAA;
+			}
+			
+			.pay_warp .warp.securities span {
+				float: right;
+				font-size: 0.7rem;
+				display: block;
+				color: #AAAAAA;
+			}
+			
+			.pay_warp .warp.pay_fun {
+				display: block;
+				padding: 0rem 0.5rem;
+			}
+			
+			.pay_warp .warp.pay_fun ul {
+				display: block;
+				width: 100%;
+			}
+			
+			.pay_warp .warp.pay_fun ul li {
+				display: block;
+				width: 100%;
+				padding: 0.5rem 0rem;
+				line-height: 2rem;
+			}
+			
+			.pay_warp .warp.pay_fun ul li img {
+				display: block;
+				float: left;
+				width: 2rem;
+				height: 2rem;
+				margin-right: 0.5rem;
+			}
+			
+			.pay_warp .warp.pay_fun ul li span {
+				position: relative;
+				display: block;
+				float: right;
+				box-sizing: border-box;
+				width: 1rem;
+				height: 1rem;
+				margin: 0.5rem;
+				border-radius: 50%;
+				border: solid 1px #AAAAAA;
+			}
+			
+			.pay_warp .warp.pay_fun ul li span i {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -0.4rem;
+				margin-top: -0.4rem;
+				display: block;
+				width: 0.8rem;
+				height: 0.8rem;
+				border-radius: 50%;
+			}
+			
+			.pay_warp .warp.pay_fun ul li.ac span {
+				border: solid 1px orange;
+			}
+			
+			.pay_warp .warp.pay_fun ul li.ac span i {
+				background: orange;
+			}
+			
+			.pay_warp .warp.pay_fun ul li.border {
+				box-sizing: border-box;
+				border-bottom: solid 1px #EEEEEE;
+			}
+			
+			.pay_securities{
+				display: block;
+				padding: 0.5;
+			}
+			
+			.pay_securities ul li{
+				padding: 0.5rem;
+				display: block;
+				background: #10CBB8;
+				color: white;
+				line-height: 1rem;
+				border-radius: 0.2rem;
+				margin-bottom: 0.5rem;
+			}
+			
+			.pay_securities ul li p{
+				font-size: 0.8rem;
+			}
+			
+			.pay_securities ul li span{
+				display: block;
+				font-size: 0.5rem;
+			}
+			
+			.pay_securities ul li.ac{				
+				background: orange;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="project_center">
+
+			<div class="pay">
+				<div class="top_template auto">
+					<span class="top_Tleft"><a href="javascript:history.back(-1)">返回</a></span>
+					<p class="top_Tcenter">收银台</p>
+					<span class="top_Trightt"></span>
+				</div>
+
+				<!--	<div class="problem_style">
+					<p></p>
+					<span class="op" onclick="drawer(0)">请选择></span>
+				</div>-->
+
+				<div class="pay_warp">
+
+					<div class="warp good">
+						<p>电话咨询<span>￥20元</span></p>
+					</div>
+
+					<div class="warp lawyer">
+						<p>服务律师<span>待确定</span></p>
+					</div>
+
+					<div class="warp securities" >
+						<p onclick="drawer(0)">优惠券<span>0张可用</span></p>
+					</div>
+
+					<div class="warp pay_fun">
+						<ul>
+							<li class="border ac" onclick="paypick(0)">
+								<img src="img/class/classbannerimgone.jpg" />支付宝<span><i></i></span>
+							</li>
+
+							<li onclick="paypick(1)">
+								<img src="img/class/classbannerimgone.jpg" />微信<span><i></i></span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="pay_bottom">
+					<ul style="display: block;">
+						<li class="bl">
+							共计：200元
+						</li>
+						<li class="br">
+							<a>立即支付</a>
+						</li>
+					</ul>
+
+				</div>
+
+				<!--优惠劵-s-->
+
+				<div class="drawer">
+					<div class="drawer_nav" style="width: 12rem;">
+						<div class="top_template auto">
+							<span class="top_Tleft" onclick="drawerClear(this)"><a>返回</a></span>
+							<p class="top_Tcenter"></p>
+							<span class="top_Trightt"></span>
+						</div>
+
+						<!---->
+						<div class="drawer_center">
+
+                          <div class="pay_securities">
+                          	<ul>
+                          		<li onclick="paysecurities(0)" class="ac">
+                          			<p>10元优惠劵</p>
+                          			<span>有效期：2018-12-12-2019-1-12</span>
+                          		</li>
+                          		
+                          		<li  onclick="paysecurities(1)">
+                          			<p>5元优惠劵</p>
+                          			<span>有效期：2018-12-12-2019-1-12</span>
+                          		</li>
+                          		
+                          		<li  onclick="paysecurities(2)">
+                          			<p>3元优惠劵</p>
+                          			<span>有效期：2018-12-12-2019-1-12</span>
+                          		</li>
+                          	</ul>
+                          </div>
+
+
+						</div>
+
+					</div>
+				</div>
+
+				<!--优惠劵-e-->
+
+			</div>
+
+		</div>
+
+		<!--提示载体-->
+		<div id="tip"></div>
+
+	</body>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Iswidth()
+
+		function Iswidth() {
+			var size = (document.documentElement.clientWidth / 360) * 20;
+
+			if(size > 40) {
+				size = 40
+			}
+
+			document.documentElement.style.fontSize = size + 'px'
+		}
+
+		function paypick(i) {
+
+			$('.warp.pay_fun ul li').eq(i).addClass('ac').siblings('li').removeClass('ac')
+
+		}
+		
+		
+			function paysecurities(i) {
+
+			$('.pay_securities ul li').eq(i).addClass('ac').siblings('li').removeClass('ac')
+
+		}
+		
+		
+	</script>
+
+</html>

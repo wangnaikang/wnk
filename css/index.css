@@ -1,0 +1,520 @@
+.index{
+	width: 100%;
+	background: whitesmoke;
+}
+
+.index_banner{
+	width: 100%;
+}
+
+.index_banner img{
+	display: block;
+	width: 100%;
+}
+
+.index_tip{
+padding: 0.8rem 0rem;
+ background: whitesmoke;
+ font-size: 0px;
+}
+
+
+.index_tip .tip_center{
+	position: relative;
+width: 17rem;
+padding-left: 1rem;
+ display: inline-block;
+ background: white;
+ font-size: 0.6rem;
+}
+
+.index_tip .tip_center span.tip_item{
+	display: block;
+	float: left;
+	padding: 0.5rem 0rem;
+	margin-right: 0.5rem;
+	vertical-align: middle
+}
+
+
+.index_tip .tip_center span.tip_item .tip_img {
+	display: block;
+	width: 1rem;
+	height: 1rem;
+}
+
+
+.index_tip .tip_center span.tip_more{
+	display: block;
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+		display: inline-block;
+	
+}
+
+.index_tip .tip_center span.tip_more small{
+float: left;
+	font-size: 0.6rem;		
+	height: 1rem;
+	line-height: 1rem;
+	margin-right: 0.2rem;
+}
+
+.index_tip .tip_center span.tip_more small.more_img{
+	float: left;
+	width: 1rem;
+	height: 1rem;
+	
+	
+}
+
+.index_tip .tip_center span.tip_more small.more_img img{
+	display: block;
+	float: right;
+	width: 0.8rem;
+	height: 0.8rem;
+	padding: 0.1rem 0rem;
+}
+
+
+
+.index_tip.consulting{
+	padding-top: 0px;
+}
+
+.index_tip.consulting .tip_center span.tip_item .tip_img{
+	height: 2rem;
+	width: 2rem;
+}
+
+.index_tip.consulting .consulting_title{
+	display: inline-block;
+	font-size: 0.8rem;
+}
+
+.index_tip.consulting .consulting_title small{
+	display: inline-block;
+	background: red;
+	font-size: 0.3rem;
+	margin-left: 0.2rem;
+	color: white;
+	padding: 0px 0.2rem;
+	border-radius: 0.1rem;
+}
+
+
+.index_tip.consulting .tip_center span.tip_more{
+	top: 1rem;
+}
+
+.index_mu{
+	width: 100%;
+	
+	
+	background: white;
+	font-size: 0px;
+}
+.index_mu .indexMu_center{
+	
+	width: 100%;
+	
+}
+
+.index_mu .indexMu_center .muLeft{
+	width: 100%;
+   display: inline-block;
+
+	padding: 0.5rem;
+	
+	box-sizing: border-box;
+	
+	
+}
+
+.index_mu .indexMu_center .muLeft img{
+	display:block;
+	width: 2rem;
+	float: left;
+	margin: 0px 0.5rem;
+}
+
+.index_mu .indexMu_center .muLeft p{
+	display: block;
+	width: 100%;
+	font-size: 0.8rem;
+	margin-top: 0.1rem;
+}
+
+.index_mu .indexMu_center .muLeft span{
+	display: block;
+		width: 100%;
+	color: #aaa;
+	font-size: 0.5rem;
+	margin-top: 0.1rem;
+}
+
+
+.index_mu .indexMu_center .muRight{
+	width: 60%;
+	float: right;
+	
+}
+
+
+
+
+.index_mu .indexMu_center .muRight .mu_item{
+	position: relative;
+	box-sizing: border-box;
+	padding: 1rem;
+	height: 4rem;
+	
+}
+
+.index_mu .indexMu_center .muRight .mu_item.top{
+	border-bottom: solid 0.1rem whitesmoke;
+}
+
+
+.index_mu .indexMu_center .muRight .mu_item.bottom{
+	border-top: solid 0.1rem whitesmoke;
+}
+
+.index_mu .indexMu_center .muRight .mu_item p{
+	font-size: 0.8rem;
+}
+
+.index_mu .indexMu_center .muRight .mu_item span{
+	font-size: 0.5rem;
+	color: #aaa;
+	display: block;
+	margin-top: 0.3rem;
+}
+
+.index_mu .indexMu_center .muRight .mu_item i{
+	display: block;
+	position: absolute;
+	top: 1.4rem;
+	right: 1rem;
+	
+}
+
+
+.index_mu .indexMu_center .muRight .mu_item i img{
+	
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.index_video{
+	width: 100%;
+	margin-top: 0.8rem;
+}
+
+.index_video .indexVideo_title{
+	position: relative;
+    font-size: 0.6rem;
+	height: 1rem;
+	line-height: 1rem;
+	background: white;
+	padding: 0.5rem;
+}
+
+.index_video .indexVideo_title .title_img{
+	float: left;
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	margin-right: 0.2rem}
+
+
+
+
+.index_video .indexVideo_title .title_more{
+	
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	display: inline-block;
+	
+}
+
+.index_video .indexVideo_title small{
+float: left;
+	font-size: 0.6rem;		
+	height: 1rem;
+	line-height: 1rem;
+	
+}
+
+.index_video .indexVideo_title small.more_img{
+	float: left;
+	width: 1rem;
+	height: 1rem;	
+}
+.index_video .indexVideo_title small.more_img img{
+	display: block;
+	float: left;
+	width: 0.8rem;
+	height: 0.8rem;
+	
+	padding: 0.1rem 0rem;
+	
+}
+
+
+.index_video .center{
+   width: 17.5rem;
+	padding-left: 0.5rem;
+	overflow: hidden;
+	font-size: 0px;
+	background: white;
+}
+
+.index_video .center_box{
+    
+	display: inline-block;
+	
+	
+}
+.index_video .center_box .item{
+	
+	float: left;
+	width: 8.25rem;
+	
+	background: wheat;
+	margin-right: 0.5rem;
+	margin-bottom: 0.5rem;
+	}
+
+.index_video .center_box .item img{
+	display: block;
+	width: 100%;
+	height: 4rem;
+}	
+	
+.index_video .center_box .item p{
+	display: block;
+	padding: 0rem 0.5rem;
+	background: #eee;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.6rem;
+}
+
+
+
+
+
+.index_lawyer .index_lawyerTitle{
+	position: relative;
+    font-size: 0.6rem;
+	height: 1rem;
+	line-height: 1rem;
+	background: white;
+	padding: 0.5rem;
+	border-top: solid 1px whitesmoke;
+	border-bottom: solid 1px whitesmoke;
+}
+
+.index_lawyer .index_lawyerTitle .title_img{
+	float: left;
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	margin-right: 0.2rem}
+
+
+
+
+.index_lawyer .index_lawyerTitle .title_more{
+	
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	display: inline-block;
+	
+}
+
+.index_lawyer .index_lawyerTitle small{
+float: left;
+	font-size: 0.6rem;		
+	height: 1rem;
+	line-height: 1rem;
+
+}
+
+.index_lawyer .index_lawyerTitle small.more_img{
+	float: left;
+	width: 1rem;
+	height: 1rem;
+	
+	
+}
+
+.index_lawyer .index_lawyerTitle small.more_img img{
+	
+	width: 0.8rem;
+	height: 0.8rem;
+	padding: 0.1rem 0rem;
+	display: block;
+	float: right;
+	margin: 0px;
+	
+	
+}
+
+
+.index_lawyer .lawyer_center{
+	display: block;
+	width: 100%;
+}
+.index_lawyer .lawyer_center ul{
+	width: 100%;
+	font-size: 0px;
+}
+
+.index_lawyer .lawyer_center ul li{
+	position: relative;
+	width: 16rem;
+	padding: 0.6rem 1rem;
+	border-bottom: solid 1px whitesmoke;
+	display: inline-block;
+	background: white;
+}
+
+
+.index_lawyer .lawyer_center ul li .item{
+	float: left;
+	
+}
+
+.index_lawyer .lawyer_center ul li .item.time{
+
+ position: absolute;
+ height: 1rem;
+ top: 50%;
+ right: 1rem;
+ line-height: 1rem;
+ margin-top: -0.5rem;	
+ font-size: 0.5rem;
+}
+
+
+.index_lawyer .lawyer_center ul li .item.id img{
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+
+.index_lawyer .lawyer_center ul li .item.center{
+	font-size: 0px;
+	margin-left: 1rem;
+}
+
+
+.index_lawyer .lawyer_center ul li .item.center p{
+	width: 100%;
+	margin-bottom: 0.1rem;
+}
+
+.index_lawyer .lawyer_center ul li .item.center p.name{
+	font-size: 0.8rem;
+}
+
+
+.index_lawyer .lawyer_center ul li .item.center p.name small{
+	display: inline-block;
+	color: white;
+	background: #0151c8;
+	padding: 0rem 0.2rem;
+	border-radius: 0.1rem;
+	font-size: 0.5rem;
+	margin-left: 0.5rem;
+}
+
+.index_lawyer .lawyer_center ul li .item.center p.evaluation small{
+	display: inline-block;
+	color: #10cbb8;
+	border: solid 1px #10CBB8;
+	padding: 0rem 0.2rem;
+	border-radius: 0.1rem;
+	font-size: 0.5rem;
+	margin-right: 0.2rem;
+	
+}
+
+.index_lawyer .lawyer_center ul li .item.center p.option small{
+	display: inline-block;
+	font-size: 0.5rem;
+	margin-right: 0.2rem;
+	
+}
+
+.index_lawyer .lawyer_center ul li .item.center p.option small img{
+	
+	width: 1rem;
+	height: 0.6rem;
+	
+}
+
+
+
+
+.index_quick{
+	margin: 0.8rem 0rem;
+	width: 100%;
+	left: 0px;
+	bottom: 0px;
+	font-size: 0px;
+	z-index: 99;
+
+}
+
+.index_quick ul{
+	display: inline-block;
+	width: 100%;
+	background: white;
+		padding: 0.3rem 0rem;
+
+	
+}
+
+
+.index_quick ul li{
+	width: 25%;
+	float: left;
+	padding:5px 0px;
+	font-size: 12px;
+	text-align: center;
+
+}
+
+
+.index_quick ul li a i{
+	display: block;
+	margin: 0px auto;
+	font-size: 26px;
+	color: #666666;
+	margin-bottom: 0.2rem;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	overflow: hidden;
+	
+	
+}
+
+
+
+
+.index_quick ul li a i img{
+ display: block;
+width: 100%;
+ margin: 0px auto;	
+ height: 2rem;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/forum.css" />
+	</head>
+
+	<body style="background: white;">
+
+		<div id="project_center" >
+
+			<div class="answer">
+				<div class="top_template fixed">
+					<span class="top_Tleft"><a href="javascript:history.back(-1)">返回</a></span>
+					<p class="top_Tcenter">我的回答</p>
+					<span class="top_Trightt"></span>
+				</div>
+				
+				<div class="answer_my">
+					<p class="wt">公司节假日放假加班应该几倍工资</p>
+					<div class="textarea">
+						<textarea class="problem_textarea" placeholder="请输入您的回答..."></textarea>
+					</div>
+					
+					<div class="post">
+						<div class="UP_img">
+							<ul id="up_imgList">
+								<li>
+									<img src="../img/class/classbannerimgone.jpg"/>
+								    <span onclick="delimg(this)">X</span>
+								</li>
+								
+								
+							
+							</ul>
+							
+							<div class="up_addimg" >添加图片
+							
+							<input type="file" onchange="upimg(this.files)" name="" id="" value="" />
+							</div>
+							
+						</div>
+						<button onclick="postAnswer()">提交</button>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+			
+
+		</div>
+
+		<!--提升形象载体-->
+		<div id="tip"></div>
+
+	</body>
+	<script src="../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Iswidth()
+
+		function Iswidth() {
+			var size = (document.documentElement.clientWidth / 360) * 20;
+
+			if(size > 40) {
+				size = 40
+			}
+
+			document.documentElement.style.fontSize = size + 'px'
+		}
+		
+		//清楚图片
+		
+		function delimg(obj){
+			$(obj).parent().remove()
+		}
+		
+		//预览图片
+		
+		function upimg(f){
+			
+  
+    for(var i=0;i<f.length;i++){
+        var reader = new FileReader();
+        reader.readAsDataURL(f[i]);
+        reader.onload = function(e){
+        
+        	var str=document.createElement("div")
+            str="<li><img src='"+e.target.result+"'/><span onclick='delimg(this)'>X</span><li>";         
+           $('#up_imgList').append(str)
+        
+        }
+        
+       }
+		
+	}	
+	
+	//上次提交
+	
+	function postAnswer  () {
+		var val=$('.problem_textarea').val()
+		
+		if(val == null || val == "" || val.trim().length == 0) {
+				tip(3, "请输入回答的内容...", 1000)
+				return false;
+			}else{
+				
+			}
+		
+	}
+		
+	</script>
+
+</html>

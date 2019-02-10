@@ -1,0 +1,167 @@
+.class_left{
+	position: fixed;
+	z-index: -1;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	width: 6rem;
+	height: 100%;
+	
+	box-sizing: border-box;
+	border-right: solid 1px #EEEEEE;
+}
+
+.class_left ul{
+	padding-top: 2rem;
+	width: 8rem;
+	height: 100%;
+    overflow: auto;
+}
+
+
+.class_left ul li{
+	width: 6rem;
+	padding-right: 2rem;
+	font-size: 0.8rem;
+	text-align: center;
+	padding: 01rem 0rem;
+	box-sizing: border-box;
+	border-bottom: solid 1px #eee;
+	background: #f8f8f8;
+}
+
+
+.class_left ul li.ac{
+	border-left: solid 0.2rem #10CBB8;
+	color: #10CBB8;
+}
+
+.class_left ul li.ac a{
+		color: #10CBB8;
+}
+
+
+.class_right{
+	position: fixed;
+	z-index: -1;
+	top: 0px;
+	right: 0px;
+	overflow: hidden;
+	width: 12rem;
+	height: 100%;
+	background: white;
+	font-size: 0px;
+	
+}
+
+.class_right ul{
+	padding-top: 2rem;
+	width: 14rem;
+	height: 100%;
+    overflow: auto;
+    font-size: 0.6rem;
+}
+
+
+.class_right ul li{
+	width: 11rem;
+	padding: 0.5rem;
+	display: none;
+}
+
+
+.class_right .banner{
+	width: 100%;
+}
+
+.class_right .banner_img{
+	width: 100%;  
+	margin-bottom: 0.5rem;
+}
+
+.class_right .banner_img img{
+	width: 100%;  
+	display: block;
+}
+
+.class_right .item_nav{
+	width: 12rem;
+	overflow: hidden;
+	
+	
+}
+
+
+.class_right .item_nav .center_item{
+	width: 13rem;
+	display: inline-block;
+}
+
+.class_right .item_nav .center_item .item{
+	position: relative;
+	width: 5.25rem;	
+	margin-right: 0.5rem;
+	float: left;
+
+}
+
+.class_right .item_nav .center_item .item .vip_m{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.5rem;
+	text-align: center;
+	padding: 0rem 0.2rem;
+	background: #10CBB8;
+	color: white;
+	
+}
+
+
+.class_right .item_nav .center_item .item .item_img img{
+	width: 100%;
+	height: 7rem;
+	display: block;
+	border: solid 1px whitesmoke;
+	box-sizing: border-box;
+}
+
+
+.class_right .item_nav .center_item .item h3{
+	font-size: 0.6rem;
+	text-align: center;
+	padding:0.2rem 0.5rem;
+	background: whitesmoke;
+	font-weight: 100;
+}
+
+
+.class_right .item_nav .center_item .item p{
+	font-size: 0.5rem;
+	padding: 0.3rem 0.3rem;
+	height: 1rem;
+	line-height: 1rem;
+	
+}
+
+.class_right .item_nav .center_item .item p small{
+	color: red;
+	font-size: 0.6rem;
+	
+}
+
+.class_right .item_nav .center_item .item p span{
+	display: block;
+	float: right;
+	
+}
+
+.class_right .item_nav .center_item .item p span img{
+	width: 0.6rem;
+	height: 0.6rem;
+	padding: 0.2rem 0rem;
+	display: block;
+	float: left;
+}

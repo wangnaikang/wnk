@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/consulting.css" />
+	</head>
+
+	<body>
+
+		<div id="project_center">
+
+			<div class="problem">
+				<div class="top_template auto">
+					<span class="top_Tleft"><a href="javascript:history.back(-1)">返回</a></span>
+					<p class="top_Tcenter">快速咨询</p>
+					<span class="top_Trightt"></span>
+				</div>
+
+				<div class="problem_style">
+					<p>问题类型</p>
+					<span class="op" onclick="drawer(0)">请选择></span>
+				</div>
+
+				<div class="problem_center">
+					<p>请简要描述你的问题限10-100字之间</p>
+					<textarea class="problem_textarea" placeholder="系统会根据您的问题描述，为你匹配相关领域律师"></textarea>
+					<p class="problem_tip ac">
+						<span><small><i></i></small>电话咨询</span>
+					</p>
+				</div>
+
+               <div class="tip_tel">
+               	说明：30分钟内拨打有效，单次拨打不限时。
+               </div>
+                 
+
+				<div class="problem_bottom">
+				
+					<ul style="display: block;">
+						<li class="bl">
+							￥20
+						</li>
+						<li class="br" onclick="go()">
+							<a>下一步</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--问题类型选项-s-->
+
+				<div class="drawer">
+					<div class="drawer_nav" style="width: 10rem;">
+						<div class="top_template auto">
+							<span class="top_Tleft" onclick="drawerClear(this)"><a>返回</a></span>
+							<p class="top_Tcenter"></p>
+							<span class="top_Trightt"></span>
+						</div>
+						
+						<!---->
+					<div class="drawer_center">
+						<div class="problem_select">
+							<ul>
+								<li onclick="problemSelect(0)">
+									<span><small></small></span>
+									<p>法律咨询</p>
+								</li>
+
+								<li onclick="problemSelect(1)">
+									<span><small></small></span>
+									<p>法律咨询</p>
+								</li>
+
+								<li onclick="problemSelect(2)">
+									<span><small></small></span>
+									<p>知识产权</p>
+								</li>
+
+								<li onclick="problemSelect(3)">
+									<span><small></small></span>
+									<p>个人名誉</p>
+								</li>
+							</ul>
+
+							<input class="problem_selectVal" type="" name="" id="" value="" />
+						</div>
+					</div>
+						
+						
+						<!---->
+						
+					</div>
+				</div>
+
+				<!--问题类型选择-e-->
+
+			</div>
+
+		</div>
+		
+		 <!--提示载体-->
+		<div id="tip"></div>
+
+	</body>
+	<script src="../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Iswidth()
+
+		function Iswidth() {
+			var size = (document.documentElement.clientWidth / 360) * 20;
+
+			if(size > 40) {
+				size = 40
+			}
+
+			document.documentElement.style.fontSize = size + 'px'
+		}
+
+
+		function problemStyle(index) {
+			$('.model').eq(index).show()
+		}
+		
+
+		function problemSelect(index) {
+			$('.problem_select ul li').eq(index).addClass('ac').siblings('li').removeClass('ac')
+
+			$('.problem_selectVal').val($('.problem_select ul li').eq(index).text().trim())
+
+			$('.problem_selectVal').val() //输入框存储选择信息
+			
+			$('.problem_style .op').text($('.problem_selectVal').val()+'>')
+
+			
+		}
+		
+		
+		
+
+		function go() { 
+             var val=$('.problem_selectVal').val()
+             var textareaVal=$('.problem_textarea').val()
+
+             if (val==""||val==null||val.trim().length==0) {
+             	tip(1, "请选择问题类型...", 1000)
+             }else if(textareaVal==""||textareaVal==null||textareaVal.trim().length==0){
+             	tip(1, "请输入问题描述...", 1000)
+             }else if(textareaVal.trim().length<10||textareaVal.trim().length>100){
+             	tip(1, "问题描述限10-100字...", 1000)
+             }else{
+             	window.location.href="consultlawyer.html"
+             }
+             
+		}
+	</script> 
+
+</html>

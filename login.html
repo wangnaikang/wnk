@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+
+	</head>
+
+	<body style="background: white;">
+
+		<div id="project_center">
+			<div class="login">
+				<div class="top_template auto">
+					<span class="top_Tleft"><a>返回</a></span>
+					<p class="top_Tcenter"></p>
+					<span class="top_Trightt"></span>
+				</div>
+
+				<div class="login_logo">
+					<img src="img/class/classbannerimgone.jpg" />
+				</div>
+
+				<div class="login_centrt">
+					<ul>
+						<li>
+							<input class="user_name" type="text" name="" id="" value="" placeholder="手机号" />
+						</li>
+						<li class="password">
+							<input class="user_yzm" type="text" name="" id="" value="" placeholder="验证码" />
+							<button onclick="getYzm(this)">发送验证码</button>
+						</li>
+
+						<button onclick="login()" class="logon_but">登录</button>
+
+						<p class="login_tip">未注册过的用户，获取验证码后即可登录</p>
+
+					</ul>
+				</div>
+
+				<div class="login_more">
+					<div class="title">
+						<span>第三方登录</span>
+					</div>
+					<ul>
+						<li>
+							<img src="img/class/classbannerimgone.jpg" />
+						</li>
+
+						<li>
+							<img src="img/class/classbannerimgone.jpg" />
+						</li>
+					</ul>
+				</div>
+
+				<div class="login_wt">
+					<p>
+						<a>登录遇到问题?</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="tip"></div>
+
+	</body>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Iswidth()
+
+		function Iswidth() {
+			var size = (document.documentElement.clientWidth / 360) * 20;
+
+			if(size > 40) {
+				size = 40
+			}
+
+			document.documentElement.style.fontSize = size + 'px'
+		}
+
+		function getYzm(obj) {
+
+			var name = $('.user_name').val()
+
+			var tel = /^1[3|4|5|7|8][0-9]{9}$/
+
+			if(name == null || name == "" || name.trim().length == 0) {
+				tip(3, "请输入手机号...", 1000)
+				return false;
+			} else if(tel.test(name) == false) {
+				tip(3, "输入的手机号格式不正确...", 1000)
+				return false;
+			} else {
+
+				if(!$(obj).is('.ac')) {
+					
+					$(obj).addClass('ac')
+					var time = 60;
+					var n = null;
+
+					n = setInterval(function() {
+						time--
+
+						$(obj).html("重新获取(" + time + ")")
+						
+						if (time==0) {
+							clearInterval(n)
+							$(obj).html("发送验证码")
+							$(obj).removeClass('ac')
+						}
+
+					}, 1000)
+				}
+
+			}
+		}
+
+		function login() {
+
+			var name = $('.user_name').val()
+			var yzm = $('.user_yzm').val()
+			var tel = /^1[3|4|5|7|8][0-9]{9}$/
+
+			if(name == null || name == "" || name.trim().length == 0) {
+				tip(3, "请输入手机号...", 1000)
+				return false;
+			} else if(tel.test(name) == false) {
+				tip(3, "输入的手机号格式不正确...", 1000)
+				return false;
+			} else if(yzm == null || yzm == "" || yzm.trim().length == 0) {
+				tip(3, "请输入验证码...", 1000)
+				return false;
+			}
+
+		}
+	</script>
+
+</html>

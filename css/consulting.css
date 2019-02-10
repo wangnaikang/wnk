@@ -1,0 +1,391 @@
+.problem_style{
+	position: relative;
+	margin: 0.5rem 0rem;
+	padding: 0.5rem;
+	background: white;
+		font-size: 0.8rem;
+}
+
+
+.problem_style .op{
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	
+}
+
+.problem_center{
+	background: white;
+	padding: 0.5rem;
+	font-size: 0.8rem;
+}
+
+
+.problem_center .problem_textarea{
+		font-size: 0.8rem;
+	width: 100%;
+	display: block;
+	height: 4rem;
+	margin-top: 0.5rem;
+	outline: none;
+	border: none;
+	background: white;
+	resize: none;
+}
+.problem_center .problem_tip{
+	text-align: right;
+	height: 1.6rem;
+}
+
+
+.problem_center .problem_tip span{
+background: whitesmoke;
+
+display: block;
+float: right;
+padding: 0.3rem 0.5rem;
+border-radius: 1.6rem;
+	
+}
+
+.problem_center .problem_tip small{
+display: block;
+float: left;
+margin: 0.1rem 0rem;
+margin-right: 0.3rem;
+width: 0.8rem;
+height: 0.8rem;
+border: solid 1px gainsboro;
+
+border-radius: 50%;
+}
+
+.problem_center .problem_tip small i{
+	display: block;
+	width: 0.6rem;
+	height: 0.6rem;
+	margin: 0.1rem;
+	box-sizing: border-box;
+	border-radius: 50%;
+	background: gainsboro;
+}
+
+.problem_center .problem_tip.ac small{
+border: solid 1px orange;
+}
+
+.problem_center .problem_tip.ac small i{
+	
+	background: orange;
+}
+
+.problem .problem_bottom{
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	z-index: 9;
+	width: 100%;
+	height: 50px;
+
+	font-size: 0.7rem;
+}
+
+.problem .problem_bottom ul{
+		display: none;
+}
+
+.problem .problem_bottom ul li{
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: white;
+}
+
+
+.problem .problem_bottom ul li.bl{
+	width: 60%;
+	color: orange;
+}
+
+.problem .problem_bottom ul li.br{
+	width: 40%;
+	color: white;
+	background: #10CBB8;
+}
+
+
+.problem .problem_bottom ul li.br a{
+	
+	color: white;
+	
+}
+
+
+.problem_select{
+	width: 8rem;
+}
+
+.problem_select ul{
+	display: block;
+	width: 100%;
+	max-height: 6rem;
+	overflow: auto;
+}
+
+
+.problem_select ul li{
+	display: block;
+	width: 100%;
+	position: relative;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.7rem;
+	
+	margin-bottom: 0.5rem;
+	
+}
+
+.problem_select ul li p{
+	padding-left: 1.3rem;
+}
+
+.problem_select ul li span{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	width: 0.8rem;
+	height: 0.8rem;
+	margin: 0.1rem;
+	box-sizing: border-box;
+	border: solid 1px orange;
+    border-radius: 50%;
+}
+
+.problem_select ul li span small{
+	display: block;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin: 0.1rem;
+	border-radius: 50%;
+}
+
+
+.problem_select ul li.ac span small{
+	background: orange;
+}
+
+.problem_select input{
+	display: none;
+}
+
+
+.tip_tel{
+	font-size: 0.6rem;
+	color: #333;
+	padding: 0.5rem;
+	display: none;
+}
+
+
+/**/
+
+
+.consultlawyer_banner{
+	position: relative;
+	display: block;
+	margin: 0.5rem;
+	background: white;	
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+}
+
+
+.consultlawyer_banner p{
+	
+	font-size: 0.8rem;
+}
+
+.consultlawyer_banner span{
+	display: block;
+	font-size: 0.6rem;
+	color: #AAAAAA;
+	margin: 0.5rem 0rem;
+}
+
+.consultlawyer_banner .consultlawyer_M{
+	color: orange;
+	font-size: 0.7rem;
+}
+
+
+.consultlawyer .consultlawyer_center{
+	display: block;
+	background: white;
+	margin: 0.5rem;
+	margin-top: 0px;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+
+.consultlawyer_center .banner img{
+	display: block;
+	width: 100%;
+}
+
+
+
+
+.consultlawyer .lawyer_center{
+	display: block;
+	width: 100%;
+}
+.consultlawyer .lawyer_center ul{
+	width: 100%;
+	font-size: 0px;
+}
+
+.consultlawyer .lawyer_center ul li{
+	position: relative;
+	width: 15rem;
+	padding: 0.6rem 1rem;
+	border-bottom: solid 1px whitesmoke;
+	display: inline-block;
+	background: white;
+}
+
+
+.consultlawyer .lawyer_center ul li .item{
+	float: left;
+	
+}
+
+
+.consultlawyer .lawyer_center ul li .item.op span{
+	position: relative;
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	float: right;
+	
+	border: solid 1px #AAAAAA;
+	border-radius: 50%;
+	margin-left: 0.2rem;
+	color: orange;
+}
+
+.consultlawyer .lawyer_center ul li .item.op span i{
+	position: absolute;
+	top: 50%;
+	margin-top: -0.3rem;
+	left: 50%;
+	margin-left: -0.3rem;
+	display: block;
+	width: 0.6rem;
+	height: 0.6rem;    
+   
+	border-radius: 50%;
+}
+
+.consultlawyer .lawyer_center ul li .item.op.ac span{
+		border: solid 1px orange;
+}
+
+
+.consultlawyer .lawyer_center ul li .item.op.ac span i{
+	background: orange;
+}
+
+.consultlawyer .lawyer_center ul li .item.op{
+
+ position: absolute;
+ height: 1rem;
+ top: 0.5rem;
+ right:0.2rem;
+ line-height: 1rem;
+color: orange;
+ font-size: 0.5rem;
+
+}
+
+.consultlawyer .lawyer_center ul li .item.id img{
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+
+.consultlawyer .lawyer_center ul li .item.center{
+	font-size: 0px;
+	margin-left: 1rem;
+}
+
+
+.consultlawyer .lawyer_center ul li .item.center p{
+	width: 100%;
+	margin-bottom: 0.1rem;
+}
+
+.consultlawyer .lawyer_center ul li .item.center p.name{
+	font-size: 0.8rem;
+}
+
+
+.consultlawyer .lawyer_center ul li .item.center p.name small{
+	display: inline-block;
+	color: white;
+	background: #0151c8;
+	padding: 0rem 0.2rem;
+	border-radius: 0.1rem;
+	font-size: 0.5rem;
+	margin-left: 0.5rem;
+}
+
+.consultlawyer .lawyer_center ul li .item.center p.evaluation small{
+	display: inline-block;
+	color: #10cbb8;
+	border: solid 1px #10CBB8;
+	padding: 0rem 0.2rem;
+	border-radius: 0.1rem;
+	font-size: 0.5rem;
+	margin-right: 0.2rem;
+	
+}
+
+.consultlawyer .lawyer_center ul li .item.center p.option small{
+	display: inline-block;
+	font-size: 0.5rem;
+	margin-right: 0.2rem;
+	
+}
+
+.consultlawyer .lawyer_center ul li .item.center p.option small img{
+	float: left;
+
+	width: 1rem;
+	height: 0.6rem;
+	
+}
+
+
+.consultlawyer_bottom{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	background: #10CBB8;
+	line-height: 50px;
+	color: white;
+	font-size: 0.7rem;
+}
+
+
+.consultlawyer_bottom a{
+	color: white;
+}

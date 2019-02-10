@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+		<style type="text/css">
+			.userMsg_head {
+				display: block;
+				padding: 1rem;
+				background: white;
+			}
+			
+			.userMsg_head .head_img {
+				position: relative;
+				width: 4rem;
+				height: 4rem;
+				overflow: hidden;
+				border-radius: 50%;
+				margin: 0px auto;
+				background-position: 50% 50%;
+				background-size: cover;
+				
+			}
+			
+			.userMsg_head .head_img input {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 4rem;
+				height: 4rem;
+				background: wheat;
+				opacity: 0;
+			}
+			
+			.userMsg_head p {
+				text-align: center;
+				font-size: 0.6rem;
+				margin-top: 0.5rem;
+				color: #AAAAAA;
+			}
+			
+			.msg_change {
+				padding: 0.5rem;
+				margin-top: 0.5rem;
+				background: white;
+				display: block;
+			}
+			
+			.msg_change ul {
+				display: block;
+			}
+			
+			.msg_change ul li {
+				padding: 0.5rem;
+				position: relative;
+				border-bottom: solid 1px #EEEEEE;
+				line-height: 1rem;
+			}
+			
+			.msg_change ul li span.lable {
+				position: absolute;
+				top: 50%;
+				margin-top: -0.5rem;
+				height: 1rem;
+				left: 0px;
+				display: block;
+				width: 2rem;
+				font-size: 0.7rem;
+				line-height: 1rem;
+			}
+			
+			.msg_change ul li p {
+				padding-left: 2rem;
+			}
+			
+			.msg_change ul li p input {
+				display: block;
+				width: 100%;
+				border: none;
+				height: 1.5rem;
+				outline: none;
+				background: none;
+				color: #AAAAAA;
+			}
+			
+			.msg_change ul li p.gender {
+				line-height: 1.5rem;
+				font-size: 0.7rem;
+			}
+			
+			.msg_change ul li p.gender span {
+				margin-right: 0.5rem;
+				color: #AAAAAA;
+			}
+			
+			.msg_change ul li p.gender span.ac {
+				color: orange;
+			}
+			
+			.msg_op {
+				position: fixed;
+				width: 100%;
+				bottom: 0px;
+				left: 0px;
+				background: #10CBB8;
+				color: white;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				font-size: 16px;
+			}
+			
+			.pick_age {
+				position: absolute;
+				width: 100%;
+				display: block;
+				height: 6rem;
+				top: 50%;
+				left: 0px;
+				margin-top: -3rem;
+				box-sizing: border-box;
+				border-bottom: solid 1px #EEEEEE;
+				border-top: solid 1px #EEEEEE;
+			}
+			
+			.pick_age .item {
+				float: left;
+				width: 4rem;
+				height: 6rem;
+				overflow: hidden;
+			}
+			
+			.pick_age .item ul {
+				display: block;
+				width: 5rem;
+				overflow: auto;
+				height: 6rem;
+			}
+			
+			.pick_age .item ul li {
+				width: 4rem;
+				line-height: 2rem;
+				text-align: center;
+				font-size: 0.7rem;
+				color: #AAAAAA;
+			}
+			
+			.pick_age .item ul li.ac {
+				color: orange;
+			}
+			
+			.age_ok {
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				display: block;
+				width: 100%;
+				text-align: center;
+				font-size: 0.7rem;
+				padding: 0.5rem 0rem;
+				border-top: solid 1px #EEEEEE;
+			}
+			
+			.constellation_warp {}
+			
+			.constellation_warp ul {
+				display: block;
+				
+				
+			}
+			
+			.constellation_warp ul li {
+				display: block;
+				line-height: 1rem;
+				color: #AAAAAA;
+				padding: 0.5rem;
+				font-size: 0.6rem;
+				box-sizing: border-box;
+				border: solid 1px #EEEEEE;
+				margin-bottom: 0.5rem;
+				border-radius: 0.2rem;
+			}
+			
+			.constellation_warp ul li.ac{
+				background: orange;
+				border: solid 1px orange;
+				color: white;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="project_center">
+
+			<div class="top_template">
+				<span class="top_Tleft"><a href="javascript:history.back(-1)">返回</a></span>
+				<p class="top_Tcenter">个人资料</p>
+				<span class="top_Trightt"></span>
+			</div>
+
+			<div class="userMsg_head">
+				<div class="head_img" style="background: url(../img/class/classbannerimgone.jpg) center no-repeat;">
+					<input type="file" name="" onchange="upimg(this.files)" id="" value="" />
+				</div>
+				<p>点击头像可修改头像</p>
+			</div>
+
+			<div class="msg_change">
+				<ul>
+					<li>
+						<span class="lable">昵称:</span>
+						<p>
+							<input class="userName" type="text" name="" id="" value="罗老师" />
+						</p>
+					</li>
+
+					<li>
+						<span class="lable">性别:</span>
+						<p class="gender">
+							<span>男</span>
+							<span>女</span>
+						</p>
+					</li>
+
+					<li>
+						<span class="lable">手机:</span>
+						<p>
+							<input type="text" name="" id="" value="123456789" />
+						</p>
+					</li>
+
+					<li class="age">
+						<span class="lable">年龄:</span>
+						<p>
+							<input class="age_val" type="text" name="" id="" value="" />
+						</p>
+					</li>
+
+					<li class="constellation">
+						<span class="lable">星座:</span>
+						<p>
+							<input class="constellation_val" type="text" name="" id="" value="" />
+						</p>
+					</li>
+
+					<li>
+						<span class="lable">签名:</span>
+						<p>
+							<input type="text" name="" id="" value="罗老师" />
+						</p>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="msg_op">
+				提交
+			</div>
+
+			<!--年龄-->
+			<div class="drawer auto">
+				<div class="drawer_nav" style="width: 12rem;">
+					<div class="top_template auto">
+						<span class="top_Tleft" onclick="drawerClear(this)"><a>返回</a></span>
+						<p class="top_Tcenter">选择年龄</p>
+						<span class="top_Trightt"></span>
+					</div>
+
+					<!---->
+					<div class="drawer_center">
+						<div class="drawer_warp">
+							<div class="pick_age">
+								<div class="age_year item">
+									<ul>
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+									</ul>
+								</div>
+
+								<div class="age_m item">
+									<ul>
+										<li>
+											01
+										</li>
+
+										<li>
+											02
+										</li>
+
+										<li>
+											03
+										</li>
+
+										<li>
+											04
+										</li>
+
+										<li>
+											05
+										</li>
+
+										<li>
+											06
+										</li>
+
+										<li>
+											07
+										</li>
+									</ul>
+								</div>
+
+								<div class="age_day item">
+									<ul>
+										<li>
+											1
+										</li>
+
+										<li>
+											2
+										</li>
+
+										<li>
+											3
+										</li>
+
+										<li>
+											4
+										</li>
+
+										<li>
+											5
+										</li>
+
+										<li>
+											6
+										</li>
+
+										<li>
+											7
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="age_ok">
+							<span>确认</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--年龄-end-->
+
+			<!--年龄-->
+			<div class="drawer auto">
+				<div class="drawer_nav" style="width: 10rem;">
+					<div class="top_template auto">
+						<span class="top_Tleft" onclick="drawerClear(this)"><a>返回</a></span>
+						<p class="top_Tcenter">选择星座</p>
+						<span class="top_Trightt"></span>
+					</div>
+
+					<!---->
+					<div class="drawer_center">
+						<div class="drawer_warp">
+							<div class="constellation_warp">
+								<ul>
+									<li>狮子座</li>
+									<li>狮子座</li>
+									<li>狮子座</li>
+									<li>狮子座</li>
+									<li>狮子座</li>
+									<li>狮子座</li>
+									<li>狮子座</li>
+									<li>狮子座</li>
+									<li>狮子座</li>
+									<li>狮子座</li>
+									<li>狮子座</li>
+									<li>狮子座</li>
+									
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--年龄-end-->
+
+			<div id="tip"></div>
+
+		</div>
+
+	</body>
+	<script src="../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Iswidth()
+
+		function Iswidth() {
+			var size = (document.documentElement.clientWidth / 360) * 20;
+
+			if(size > 40) {
+				size = 40
+			}
+
+			document.documentElement.style.fontSize = size + 'px'
+		}
+	</script>
+
+	<script type="text/javascript">
+		
+		
+			//预览图片
+		
+		function upimg(f){
+			
+  
+    for(var i=0;i<f.length;i++){
+        var reader = new FileReader();
+        reader.readAsDataURL(f[i]);
+        reader.onload = function(e){
+        
+        	/*var str=document.createElement("div")
+            str="<li><img src='"++"'/><span onclick='delimg(this)'>X</span><li>";       */  
+           document.getElementsByClassName('head_img')[0].style.background="url("+e.target.result+") center no-repeat"
+        
+        }
+        
+       }
+		
+	}
+		
+		
+		$('.gender span').on('click', function() {
+			$(this).addClass('ac').siblings('span').removeClass('ac')
+		})
+
+		$('.age').on('click', function() {
+			drawer(0)
+		})
+
+		$('.constellation').on('click', function() {
+			drawer(1)
+		})
+
+		var year = "";
+		var month = "01";
+		var day = "01";
+
+		$('.age_year li').click(function() {
+			$(this).addClass('ac').siblings('li').removeClass('ac')
+			$('.age_m li').eq(0).addClass('ac').siblings('li').removeClass('ac')
+			$('.age_m ul').scrollTop('0px')
+			$('.age_day li').eq(0).addClass('ac').siblings('li').removeClass('ac')
+			$('.age_day ul').scrollTop('0px')
+			year = $(this).text().trim()
+
+		})
+
+		$('.age_m li').click(function() {
+			$(this).addClass('ac').siblings('li').removeClass('ac')
+			month = $(this).text().trim()
+		})
+
+		$('.age_day li').click(function() {
+			$(this).addClass('ac').siblings('li').removeClass('ac')
+			day = $(this).text().trim()
+		})
+		
+		
+
+		$('.age_ok span').on('click', function() {
+
+			if(year == "" || year == null || year.trim().length == 0) {
+				tip(1, "请选择出生年份...", 1000)
+				return false;
+			}
+
+			$('.age_val').val(year + '-' + month + '-' + day)
+			draweroff(0)
+		})
+		
+		
+		$('.constellation_warp li').on('click', function() {
+			$(this).addClass('ac').siblings('li').removeClass('ac')
+			$('.constellation_val').val($(this).text().trim())
+		})
+		
+		
+		$('.msg_op').on('click',function  () {
+			
+			var name=$('.userName').val()
+			if(name == "" || name == null || name.trim().length == 0) {
+				tip(1, "请输入昵称...", 1000)
+				return false;
+			}
+			
+		})
+	</script>
+
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+		<style type="text/css">
+			.documents {
+				display: block;
+				width: 100%;
+			}
+			
+			.documents .documents_head {
+				padding: 0.5rem;
+				display: block;
+				background: white;
+			}
+			
+			.documents .documents_head .documents_banner {
+				background: #333333;
+				padding: 0.5rem;
+				display: block;
+				border-radius: 6px;
+			}
+			
+			.documents .documents_head .documents_banner p {
+				font-size: 0.8rem;
+				color: white;
+			}
+			
+			.documents .documents_head .documents_banner span {
+				font-size: 0.7rem;
+				color: #AAAAAA;
+			}
+			
+			.documents .documents_warp {
+				display: block;
+				padding-top: 0.5rem;
+			}
+			
+			.documents .documents_warp ul {
+				display: block;
+			}
+			
+			.documents .documents_warp ul li {
+				background: white;
+				padding: 0.5rem;
+				font-size: 0.8rem;
+				margin-bottom: 0.5rem;
+				line-height: 1rem;
+			}
+			
+			.documents .documents_warp ul li span {
+				float: right;
+				display: inline-block;
+			}
+			
+			.documents .documents_warp ul li small {
+				float: left;
+				font-size: 0.6rem;
+			}
+			
+			.documents .documents_warp ul li span img {
+				float: right;
+				width: 1rem;
+				height: 1rem;
+			}
+			
+			.documents .documents_warp ul li input {
+				display: none;
+			}
+			
+			.pick_age {
+				position: absolute;
+				width: 100%;
+				display: block;
+				height: 6rem;
+				top: 50%;
+				left: 0px;
+				margin-top: -3rem;
+				box-sizing: border-box;
+				border-bottom: solid 1px #EEEEEE;
+				border-top: solid 1px #EEEEEE;
+			}
+			
+			.pick_age .item {
+				float: left;
+				width: 4rem;
+				height: 6rem;
+				overflow: hidden;
+			}
+			
+			.pick_age .item ul {
+				display: block;
+				width: 5rem;
+				overflow: auto;
+				height: 6rem;
+			}
+			
+			.pick_age .item ul li {
+				width: 4rem;
+				line-height: 2rem;
+				text-align: center;
+				font-size: 0.7rem;
+				color: #AAAAAA;
+			}
+			
+			.pick_age .item ul li.ac {
+				color: orange;
+			}
+			
+			.age_ok {
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				display: block;
+				width: 100%;
+				text-align: center;
+				font-size: 0.7rem;
+				padding: 0.5rem 0rem;
+				border-top: solid 1px #EEEEEE;
+			}
+			
+			.textarea textarea {
+				display: block;
+				width: 100%;
+				margin-top: 0.5rem;
+				box-sizing: border-box;
+				border: none;
+				border-top: solid 1px #EEEEEE;
+				outline: none;
+				height: 3rem;
+				resize: none;
+				padding-top: 0.5rem;
+				font-size: 0.7rem;
+			}
+			
+			.drawer_anlist ul {
+				display: block;
+			}
+			
+			.drawer_anlist ul li {
+				display: block;
+				line-height: 1rem;
+				color: #AAAAAA;
+				padding: 0.5rem;
+				font-size: 0.6rem;
+				box-sizing: border-box;
+				border: solid 1px #EEEEEE;
+				margin-bottom: 0.5rem;
+				border-radius: 0.2rem;
+			}
+			
+			.drawer_anlist ul li.ac {
+				background: orange;
+				border: solid 1px orange;
+				color: white;
+			}
+			
+			.documents_op {
+				position: fixed;
+				bottom: 0px;
+				left: 0px;
+				width: 100%;
+				height: 50px;
+				background: white;
+				font-size: 0px;
+			}
+			
+			.documents_op span {
+				display: block;
+				padding: 5px;
+				height: 40px;
+			}
+			
+			.documents_op span a {
+				display: block;
+				background: #10CBB8;
+				line-height: 40px;
+				text-align: center;
+				color: white;
+				font-size: 16px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="project_center">
+
+			<div class="top_template">
+				<span class="top_Tleft"><a href="javascript:history.back(-1)">返回</a></span>
+				<p class="top_Tcenter">文书代写</p>
+				<span class="top_Trightt"></span>
+			</div>
+
+			<div class="documents">
+
+				<div class="documents_head">
+					<div class="documents_banner">
+						<p>代写文书</p>
+						<span>委托律师代写合同或规章手册等</span>
+					</div>
+				</div>
+
+				<div class="documents_warp">
+					<ul>
+						<li onclick="drawer(0)">委托方信息
+							<span>
+								<small class="documents_msg"></small>
+								<input class="documents_val" type="text" name="" id="" value="" />
+								<img src="../img/enter.png"/></span>
+						</li>
+
+						<li onclick="drawer(1)">法律领域
+							<span>
+								<small class="documents_msg"></small>
+								<input class="documents_val" type="text" name="" id="" value="" />
+								<img src="../img/enter.png"/></span>
+						</li>
+
+						<li onclick="drawer(2)">是否涉及款价
+							<span>
+								<small class="documents_msg"></small>
+								<input class="documents_val" type="text" name="" id="" value="" />
+								<img src="../img/enter.png"/></span>
+						</li>
+
+						<li onclick="drawer(3)">文书交付时间
+							<span>
+								<small class="documents_msg"></small>
+								<input class="documents_val" type="text" name="" id="" value="" />
+								<img src="../img/enter.png"/></span>
+						</li>
+
+						<li class="textarea">文书用途
+							<textarea name="" rows="" cols="" placeholder="请简单描述文书的用途，以便律师报价"></textarea>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="documents_op">
+				<span><a>寻求报价</a></span>
+			</div>
+
+			<!--委托方信息-->
+
+			<div class="drawer auto">
+				<div class="drawer_nav" style="width: 10rem;">
+					<div class="top_template auto">
+						<span class="top_Tleft" onclick="drawerClear(this)"><a>返回</a></span>
+						<p class="top_Tcenter">委托方信息</p>
+						<span class="top_Trightt"></span>
+					</div>
+
+					<!---->
+					<div class="drawer_center">
+						<div class="drawer_warp">
+							<div class="drawer_anlist delegate">
+								<ul>
+									<li>个人</li>
+									<li>企业</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--委托方信息-->
+
+			<!--法律领域-->
+
+			<div class="drawer auto">
+				<div class="drawer_nav" style="width: 10rem;">
+					<div class="top_template auto">
+						<span class="top_Tleft" onclick="drawerClear(this)"><a>返回</a></span>
+						<p class="top_Tcenter">法律领域</p>
+						<span class="top_Trightt"></span>
+					</div>
+
+					<!---->
+					<div class="drawer_center">
+						<div class="drawer_warp">
+							<div class="drawer_anlist type">
+								<ul>
+									<li>民事</li>
+									<li>商事</li>
+									<li>其他</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--法律领域-->
+
+			<!--是否涉及款价-->
+
+			<div class="drawer auto">
+				<div class="drawer_nav" style="width: 10rem;">
+					<div class="top_template auto">
+						<span class="top_Tleft" onclick="drawerClear(this)"><a>返回</a></span>
+						<p class="top_Tcenter">是否涉及款价</p>
+						<span class="top_Trightt"></span>
+					</div>
+
+					<!---->
+					<div class="drawer_center">
+						<div class="drawer_warp">
+							<div class="drawer_anlist isprice">
+								<ul>
+									<li>是</li>
+									<li>否</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--是否涉及款价-->
+
+			<!--时间-->
+
+			<div class="drawer auto">
+				<div class="drawer_nav" style="width: 12rem;">
+					<div class="top_template auto">
+						<span class="top_Tleft" onclick="drawerClear(this)"><a>返回</a></span>
+						<p class="top_Tcenter">文书交付时间</p>
+						<span class="top_Trightt"></span>
+					</div>
+
+					<!---->
+					<div class="drawer_center">
+						<div class="drawer_warp">
+							<div class="pick_age">
+								<div class="age_year item">
+									<ul>
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+
+										<li>
+											1970
+										</li>
+									</ul>
+								</div>
+
+								<div class="age_m item">
+									<ul>
+										<li>
+											01
+										</li>
+
+										<li>
+											02
+										</li>
+
+										<li>
+											03
+										</li>
+
+										<li>
+											04
+										</li>
+
+										<li>
+											05
+										</li>
+
+										<li>
+											06
+										</li>
+
+										<li>
+											07
+										</li>
+									</ul>
+								</div>
+
+								<div class="age_day item">
+									<ul>
+										<li>
+											1
+										</li>
+
+										<li>
+											2
+										</li>
+
+										<li>
+											3
+										</li>
+
+										<li>
+											4
+										</li>
+
+										<li>
+											5
+										</li>
+
+										<li>
+											6
+										</li>
+
+										<li>
+											7
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="age_ok">
+							<span>确认</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--时间-->
+
+			<div id="tip"></div>
+
+		</div>
+
+	</body>
+	<script src="../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Iswidth()
+
+		function Iswidth() {
+			var size = (document.documentElement.clientWidth / 360) * 20;
+
+			if(size > 40) {
+				size = 40
+			}
+
+			document.documentElement.style.fontSize = size + 'px'
+		}
+	</script>
+
+	<script type="text/javascript">
+		//委托方
+
+		$('.delegate li').on('click', function() {
+			$(this).addClass('ac').siblings('li').removeClass('ac')
+			$('.documents_msg').eq(0).text($(this).text().trim())
+			$('.documents_val').eq(0).val($(this).text().trim())
+		})
+		//法律领域
+		$('.type li').on('click', function() {
+			$(this).addClass('ac').siblings('li').removeClass('ac')
+			$('.documents_msg').eq(1).text($(this).text().trim())
+			$('.documents_val').eq(1).val($(this).text().trim())
+		})
+
+		//是否涉及款价
+		$('.isprice li').on('click', function() {
+			$(this).addClass('ac').siblings('li').removeClass('ac')
+			$('.documents_msg').eq(2).text($(this).text().trim())
+			$('.documents_val').eq(2).val($(this).text().trim())
+		})
+
+		//time
+
+		var year = "";
+		var month = "01";
+		var day = "01";
+
+		$('.age_year li').click(function() {
+			$(this).addClass('ac').siblings('li').removeClass('ac')
+			$('.age_m li').eq(0).addClass('ac').siblings('li').removeClass('ac')
+			$('.age_m ul').scrollTop('0px')
+			$('.age_day li').eq(0).addClass('ac').siblings('li').removeClass('ac')
+			$('.age_day ul').scrollTop('0px')
+			year = $(this).text().trim()
+
+		})
+
+		$('.age_m li').click(function() {
+			$(this).addClass('ac').siblings('li').removeClass('ac')
+			month = $(this).text().trim()
+		})
+
+		$('.age_day li').click(function() {
+			$(this).addClass('ac').siblings('li').removeClass('ac')
+			day = $(this).text().trim()
+		})
+
+		$('.age_ok span').on('click', function() {
+
+			if(year == "" || year == null || year.trim().length == 0) {
+				tip(1, "请选择出生年份...", 1000)
+				return false;
+			}
+
+			$('.documents_msg').eq(3).text(year + '-' + month + '-' + day)
+			$('.documents_val').eq(3).val(year + '-' + month + '-' + day)
+
+			draweroff(3)
+		})
+		//寻求报价
+		
+		
+		
+		$('.documents_op span').click(function() {
+			
+			var delegateVal=$('.documents_val').eq(0).val()
+			var typeVal=$('.documents_val').eq(1).val()
+			var ispriceVal=$('.documents_val').eq(2).val()
+			var timeVal=$('.documents_val').eq(3).val()
+			var textareaVal=$('.textarea textarea').val()
+			
+			if (delegateVal==""||delegateVal==null||delegateVal.trim().length==0) {				
+				tip(1, "请选择委托方信息...", 1000)
+				return false;
+				
+			}else if (typeVal==""||typeVal==null||typeVal.trim().length==0) {				
+				tip(1, "请选择法律领域信息...", 1000)
+				return false;
+				
+			}else if (ispriceVal==""||ispriceVal==null||ispriceVal.trim().length==0) {				
+				tip(1, "请选择是否涉及款价...", 1000)
+				return false;
+				
+			}else if (timeVal==""||timeVal==null||timeVal.trim().length==0) {				
+				tip(1, "请选择交付时间...", 1000)
+				return false;
+				
+			}else if (textareaVal==""||textareaVal==null||textareaVal.trim().length==0) {				
+				tip(1, "请输入文书用途...", 1000)
+				return false;
+				
+			}
+			
+		})
+	</script>
+
+</html>
